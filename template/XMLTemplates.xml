@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+	<template context="xml_all" deleted="false"
+		description="add comments with task imformation." enabled="true" name="taskadd">
+		&lt;!-- [Start][REDMINE-0][Added by ${user} on ${date}]Description:
+		--&gt;&#13;
+		&lt;!-- [End][REDMINE-0][Added by ${user} on ${date}]Description: --&gt;
+	</template>
+	<template context="xml_all" deleted="false"
+		description="modify comments with task imformation." enabled="true" name="taskmodify">
+		&lt;!-- [Start][REDMINE-0][Modified by ${user} on ${date}]Description:
+		--&gt;&#13;
+		&lt;!-- [End][REDMINE-0][Modified by ${user} on ${date}]Description: --&gt;
+	</template>
+</templates>

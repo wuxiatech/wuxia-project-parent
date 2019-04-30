@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <groupId>cn.wuxia.parent</groupId>
+        <artifactId>parent2019</artifactId>
+        <version>2.3.3</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>cn.wuxia.project</groupId>
+    <artifactId>wuxia.project-parent</artifactId>
+    <version>2.0.1</version>
+    <packaging>pom</packaging>
+    <name>Project Parent</name>
+    <url>https://gitee.com/wuxiatech/project-parent</url>
+
+
+    <modules>
+        <module>../wuxia-project-common</module>
+        <module>../wuxia-project-core</module>
+        <module>../wuxia-project-storage</module>
+        <module>../wuxia-project-scheduler</module>
+        <module>../wuxia-project-security</module>
+        <module>../wuxia-project-security-user</module>
+        <module>../wuxia-project-mq</module>
+        <module>../wuxia-project-epay</module>
+        <module>../wuxia-project-weixin</module>
+        <module>../wuxia-project-ad</module>
+        <module>../wuxia-project-location</module>
+    </modules>
+    <!-- Version Setting -->
+    <properties>
+        <wuxia-common.version>2.3.3</wuxia-common.version>
+        <wuxia-aliyun-components.version>2.3.3</wuxia-aliyun-components.version>
+        <wuxia-orm-hibernate.version>2.3.3</wuxia-orm-hibernate.version>
+        <wuxia-orm-springdata.version>2.3.3</wuxia-orm-springdata.version>
+        <wuxia-component-cache.version>2.3.3</wuxia-component-cache.version>
+        <wuxia-component-epay.version>2.3.3</wuxia-component-epay.version>
+        <wuxia-component-email.version>2.3.3</wuxia-component-email.version>
+        <wuxia-weixin-api.version>2.3.3</wuxia-weixin-api.version>
+        <wuxia-tools-socket.version>2.3.3</wuxia-tools-socket.version>
+        <wuxia-tools-officesuite.version>2.3.3</wuxia-tools-officesuite.version>
+
+
+
+        <!-- Plugin的属性定义 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jdk.version>1.8</jdk.version>
+        <drools.version>6.4.0.Final</drools.version>
+        <activiti.version>5.22.0</activiti.version>
+        <thisproject.home>${basedir}/src/main/webapp</thisproject.home>
+        <thisproject.resources>${thisproject.home}/WEB-INF/classes</thisproject.resources>
+    </properties>
+
+    <!-- Dependency Setting -->
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>cn.wuxia.common</groupId>
+                <artifactId>wuxia.common</artifactId>
+                <version>${wuxia-common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.wuxia.component</groupId>
+                <artifactId>wuxia.cache-component</artifactId>
+                <version>${wuxia-component-cache.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.wuxia.component</groupId>
+                <artifactId>wuxia.aliyun-component</artifactId>
+                <version>${wuxia-aliyun-components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.wuxia.common</groupId>
+                <artifactId>wuxia.hibernate5-orm</artifactId>
+                <version>${wuxia-orm-hibernate.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.wuxia.common</groupId>
+                <artifactId>wuxia.springdata2-orm</artifactId>
+                <version>${wuxia-orm-springdata.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.wuxia.component</groupId>
+                <artifactId>wuxia.epay-component</artifactId>
+                <version>${wuxia-component-epay.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.wuxia.component</groupId>
+                <artifactId>wuxia.email-component</artifactId>
+                <version>${wuxia-component-email.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.wuxia.common</groupId>
+                <artifactId>wuxia.weixin-api</artifactId>
+                <version>${wuxia-weixin-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.wuxia.tools</groupId>
+                <artifactId>wuxia.socket-tools</artifactId>
+                <version>${wuxia-socket.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.wuxia.tools</groupId>
+                <artifactId>wuxia.officesuite-tool</artifactId>
+                <version>${wuxia-tools-officesuite.version}</version>
+            </dependency>
+
+
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>2.9.2</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>2.9.2</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.apache.avalon.framework/avalon-framework-api -->
+            <dependency>
+                <groupId>org.apache.avalon.framework</groupId>
+                <artifactId>avalon-framework-api</artifactId>
+                <version>4.3.1</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/net.sf.barcode4j/barcode4j -->
+            <dependency>
+                <groupId>net.sf.barcode4j</groupId>
+                <artifactId>barcode4j</artifactId>
+                <version>2.1</version>
+            </dependency>
+
+            <!--start 音频转换 -->
+            <dependency>
+                <groupId>org</groupId>
+                <artifactId>jaudiotagger</artifactId>
+                <version>2.0.3</version>
+            </dependency>
+            <!-- 来源第三方非仓库如新环境则需要手动安装到仓库 -->
+            <dependency>
+                <groupId>lt.jave</groupId>
+                <artifactId>jave</artifactId>
+                <version>1.0.2</version>
+            </dependency>
+            <!-- end 音频转换 -->
+            <!-- start drools 最少引用 -->
+            <dependency>
+                <groupId>org.drools</groupId>
+                <artifactId>drools-core</artifactId>
+                <version>${drools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.drools</groupId>
+                <artifactId>drools-compiler</artifactId>
+                <version>${drools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.kie</groupId>
+                <artifactId>kie-spring</artifactId>
+                <version>${drools.version}</version>
+            </dependency>
+            <!-- end drools -->
+            <dependency>
+                <groupId>org.activiti</groupId>
+                <artifactId>activiti-engine</artifactId>
+                <version>${activiti.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.activiti</groupId>
+                <artifactId>activiti-bpmn-layout</artifactId>
+                <version>${activiti.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.activiti</groupId>
+                <artifactId>activiti-spring</artifactId>
+                <version>${activiti.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <configuration>
+                    <war>target/${project.artifactId}.war</war>
+                    <webApp>
+                        <allowDuplicateFragmentNames>true</allowDuplicateFragmentNames>
+                        <jettyEnvXml>src/test/resources/jetty-env.xml</jettyEnvXml>
+                    </webApp>
+                    <jvmArgs>
+                        -Dlog4jdbc.drivers=com.mysql.cj.jdbc.Driver
+                    </jvmArgs>
+                    <systemProperties>
+                        <systemProperty>
+                            <name>log4jdbc.drivers</name>
+                            <value>com.mysql.cj.jdbc.Driver</value>
+                        </systemProperty>
+                    </systemProperties>
+                    <!--<scanIntervalSeconds>5</scanIntervalSeconds> -->
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.googlecode.log4jdbc</groupId>
+                        <artifactId>log4jdbc</artifactId>
+                        <version>1.2</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>6.0.6</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>com.alibaba</groupId>
+                        <artifactId>druid</artifactId>
+                        <version>1.1.12</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+
+    </build>
+    <profiles>
+
+        <profile>
+            <id>deploy_config</id>
+            <activation>
+                <property>
+                    <name>deploy_config</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-war-plugin</artifactId>
+                        <configuration>
+                            <webappDirectory>${thisproject.home}</webappDirectory>
+                            <warSourceDirectory>${thisproject.home}</warSourceDirectory>
+                            <!-- <packagingIncludes>**/*,WEB-INF/lib/WMG*.jar</packagingIncludes> -->
+                            <packagingExcludes>
+                                WEB-INF/classes/properties/*,
+                                WEB-INF/classes/properties,
+                                WEB-INF/classes/*.properties,
+                                WEB-INF/classes/logback.xml,
+                                WEB-INF/classes/rebel.xml,
+                                WEB-INF/lib/F*.jar,
+                                %regex[WEB-INF/lib/(?!(wuxia|project)).*],
+                            </packagingExcludes>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+
+        <profile>
+            <id>deploy_exclude_prop</id>
+            <activation>
+                <property>
+                    <name>deploy_exclude_prop</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-war-plugin</artifactId>
+                        <configuration>
+                            <webappDirectory>${thisproject.home}</webappDirectory>
+                            <warSourceDirectory>${thisproject.home}</warSourceDirectory>
+                            <!-- <packagingIncludes>**/*,WEB-INF/lib/WMG*.jar</packagingIncludes> -->
+                            <packagingExcludes>
+                                WEB-INF/classes/properties/*,
+                                WEB-INF/classes/properties,
+                                WEB-INF/classes/*.properties,
+                                WEB-INF/classes/logback.xml,
+                                WEB-INF/classes/rebel.xml
+                            </packagingExcludes>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>clean_m2_jar</id>
+            <activation>
+                <property>
+                    <name>clean_m2_jar</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>clean</id>
+                                <configuration>
+                                    <target>
+                                        <echo>delete
+                                            ${user.home}/.m2/repository/cn/wuxia/project/${project.artifactId}
+                                        </echo>
+                                        <delete includeemptydirs="true">
+                                            <fileset dir="${user.home}/.m2/repository/cn/wuxia/project/${project.artifactId}"
+                                                     defaultexcludes="false">
+                                                <filename name="**"/>
+                                            </fileset>
+                                        </delete>
+                                    </target>
+                                </configuration>
+                                <phase>clean</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+    <repositories>
+        <!--<repository>-->
+        <!--<id>daoming-public</id>-->
+        <!--<name>Public Repositories</name>-->
+        <!--<url>http://192.168.1.10:8081/repository/maven-public/</url>-->
+        <!--<releases>-->
+        <!--<enabled>true</enabled>-->
+        <!--</releases>-->
+        <!--<snapshots>-->
+        <!--<enabled>true</enabled>-->
+        <!--</snapshots>-->
+        <!--</repository>-->
+        <repository>
+            <id>rdc-releases</id>
+            <url>https://repo.rdc.aliyun.com/repository/29962-release-ablYFt/</url>
+        </repository>
+        <repository>
+         		<id>rdc-snapshots</id>
+            <url>https://repo.rdc.aliyun.com/repository/29962-snapshot-54IdqK/</url>
+        </repository>
+        <repository>
+            <id>aliyun-public</id>
+            <name>Public Repositories</name>
+            <url>https://maven.aliyun.com/repository/central/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+
+        <repository>
+            <id>maven-central</id>
+            <name>Maven Public Repositories</name>
+            <url>https://repo1.maven.org/maven2/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <!--<repository>
+            <id>maven-jboss</id>
+            <name>Maven Public Repositories</name>
+            <url>https://repository.jboss.org/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>-->
+    </repositories>
+    <!--<pluginRepositories>-->
+    <!--<pluginRepository>-->
+    <!--<id>daoming-public</id>-->
+    <!--<name>Public Repositories</name>-->
+    <!--<url>http://192.168.1.10:8081/repository/maven-public/</url>-->
+    <!--<releases>-->
+    <!--<enabled>true</enabled>-->
+    <!--</releases>-->
+    <!--<snapshots>-->
+    <!--<enabled>true</enabled>-->
+    <!--</snapshots>-->
+    <!--</pluginRepository>-->
+    <!--</pluginRepositories>-->
+    <!--<distributionManagement>-->
+    <!--<repository>-->
+    <!--<id>daoming-releases</id>-->
+    <!--<name>Nexus Release Repository</name>-->
+    <!--<url>http://192.168.1.10:8081/repository/maven-releases/</url>-->
+    <!--</repository>-->
+    <!--<snapshotRepository>-->
+    <!--<id>daoming-snapshots</id>-->
+    <!--<name>Nexus Snapshot Repository</name>-->
+    <!--<url>http://192.168.1.10:8081/repository/maven-snapshots//</url>-->
+    <!--</snapshotRepository>-->
+    <!--</distributionManagement>-->
+</project>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><templates><template context="java" deleted="false" description="add comments with task information." enabled="true" name="task">//[REDMINE-0][Added/Modified by ${user} on ${date}]&#13;
+       </template><template context="java" deleted="false" description="add comments with task information." enabled="true" name="taskadd">//[Start][REDMINE-0][Added by ${user} on ${date}]Description:&#13;
+//[End][REDMINE-0][Added by ${user} on ${date}]Description:&#13;
+       </template><template context="java" deleted="false" description="modify comments with task information." enabled="true" name="taskmodify">//[Start][REDMINE-0][Modified by ${user} on ${date}]Description:&#13;
+//[End][REDMINE-0][Modified by ${user} on ${date}]Description:&#13;
+       </template></templates>
