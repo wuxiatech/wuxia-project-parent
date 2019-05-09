@@ -327,17 +327,6 @@
         </profile>
     </profiles>
     <repositories>
-        <!--<repository>-->
-        <!--<id>daoming-public</id>-->
-        <!--<name>Public Repositories</name>-->
-        <!--<url>http://192.168.1.10:8081/repository/maven-public/</url>-->
-        <!--<releases>-->
-        <!--<enabled>true</enabled>-->
-        <!--</releases>-->
-        <!--<snapshots>-->
-        <!--<enabled>true</enabled>-->
-        <!--</snapshots>-->
-        <!--</repository>-->
         <repository>
             <id>rdc-releases</id>
             <url>https://repo.rdc.aliyun.com/repository/29962-release-ablYFt/</url>
@@ -369,41 +358,5 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-        <!--<repository>
-            <id>maven-jboss</id>
-            <name>Maven Public Repositories</name>
-            <url>https://repository.jboss.org/nexus/content/groups/public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>-->
     </repositories>
-    <!--<pluginRepositories>-->
-    <!--<pluginRepository>-->
-    <!--<id>daoming-public</id>-->
-    <!--<name>Public Repositories</name>-->
-    <!--<url>http://192.168.1.10:8081/repository/maven-public/</url>-->
-    <!--<releases>-->
-    <!--<enabled>true</enabled>-->
-    <!--</releases>-->
-    <!--<snapshots>-->
-    <!--<enabled>true</enabled>-->
-    <!--</snapshots>-->
-    <!--</pluginRepository>-->
-    <!--</pluginRepositories>-->
-    <!--<distributionManagement>-->
-    <!--<repository>-->
-    <!--<id>daoming-releases</id>-->
-    <!--<name>Nexus Release Repository</name>-->
-    <!--<url>http://192.168.1.10:8081/repository/maven-releases/</url>-->
-    <!--</repository>-->
-    <!--<snapshotRepository>-->
-    <!--<id>daoming-snapshots</id>-->
-    <!--<name>Nexus Snapshot Repository</name>-->
-    <!--<url>http://192.168.1.10:8081/repository/maven-snapshots//</url>-->
-    <!--</snapshotRepository>-->
-    <!--</distributionManagement>-->
 </project>
