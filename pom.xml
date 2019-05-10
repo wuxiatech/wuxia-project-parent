@@ -5,13 +5,13 @@
     <parent>
         <groupId>cn.wuxia.parent</groupId>
         <artifactId>parent2019</artifactId>
-        <version>2.3.3</version>
+        <version>2.3.4</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.wuxia.project</groupId>
     <artifactId>wuxia.project-parent</artifactId>
-    <version>2.0.3</version>
+    <version>2.0.4</version>
     <packaging>pom</packaging>
     <name>Project Parent</name>
     <url>https://github.com/wuxiatech/wuxia-project-parent.git</url>
@@ -32,16 +32,16 @@
     </modules>
     <!-- Version Setting -->
     <properties>
-        <wuxia-common.version>2.3.3</wuxia-common.version>
-        <wuxia-aliyun-components.version>2.3.3</wuxia-aliyun-components.version>
-        <wuxia-orm-hibernate.version>2.3.3</wuxia-orm-hibernate.version>
-        <wuxia-orm-springdata.version>2.3.3</wuxia-orm-springdata.version>
-        <wuxia-component-cache.version>2.3.3</wuxia-component-cache.version>
-        <wuxia-component-epay.version>2.3.3</wuxia-component-epay.version>
-        <wuxia-component-email.version>2.3.3</wuxia-component-email.version>
-        <wuxia-weixin-api.version>2.3.3</wuxia-weixin-api.version>
-        <wuxia-tools-socket.version>2.3.3</wuxia-tools-socket.version>
-        <wuxia-tools-officesuite.version>2.3.3</wuxia-tools-officesuite.version>
+        <wuxia-common.version>2.3.4</wuxia-common.version>
+        <wuxia-aliyun-components.version>2.3.4</wuxia-aliyun-components.version>
+        <wuxia-orm-hibernate.version>2.3.4</wuxia-orm-hibernate.version>
+        <wuxia-orm-springdata.version>2.3.4</wuxia-orm-springdata.version>
+        <wuxia-component-cache.version>2.3.4</wuxia-component-cache.version>
+        <wuxia-component-epay.version>2.3.4</wuxia-component-epay.version>
+        <wuxia-component-email.version>2.3.4</wuxia-component-email.version>
+        <wuxia-weixin-api.version>2.3.4</wuxia-weixin-api.version>
+        <wuxia-tools-socket.version>2.3.4</wuxia-tools-socket.version>
+        <wuxia-tools-officesuite.version>2.3.4</wuxia-tools-officesuite.version>
 
 
 
@@ -202,7 +202,8 @@
                             <value>com.mysql.cj.jdbc.Driver</value>
                         </systemProperty>
                     </systemProperties>
-                    <!--<scanIntervalSeconds>5</scanIntervalSeconds> -->
+                    <!-- 如果使用jrebel需要注释下面这行代码 -->
+                    <!--<scanIntervalSeconds>5</scanIntervalSeconds>-->
                 </configuration>
                 <dependencies>
                     <dependency>
