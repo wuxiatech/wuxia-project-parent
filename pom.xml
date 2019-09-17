@@ -5,13 +5,13 @@
     <parent>
         <groupId>cn.wuxia.parent</groupId>
         <artifactId>parent2019</artifactId>
-        <version>2.3.7</version>
+        <version>2.3.8</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.wuxia.project</groupId>
     <artifactId>wuxia.project-parent</artifactId>
-    <version>2.1.0</version>
+    <version>2.2.0</version>
     <packaging>pom</packaging>
     <name>Project Parent</name>
     <url>https://github.com/wuxiatech/wuxia-project-parent.git</url>
@@ -34,16 +34,15 @@
     </modules>
     <!-- Version Setting -->
     <properties>
-        <wuxia-common.version>2.3.7</wuxia-common.version>
-        <wuxia-aliyun-components.version>2.3.7</wuxia-aliyun-components.version>
-        <wuxia-orm-hibernate.version>2.3.7</wuxia-orm-hibernate.version>
-        <wuxia-orm-springdata.version>2.3.7</wuxia-orm-springdata.version>
-        <wuxia-component-cache.version>2.3.7</wuxia-component-cache.version>
-        <wuxia-component-email.version>2.3.7</wuxia-component-email.version>
-        <wuxia-weixin-api.version>2.3.7</wuxia-weixin-api.version>
-        <wuxia-tools-socket.version>2.3.7</wuxia-tools-socket.version>
-        <wuxia-tools-officesuite.version>2.3.7</wuxia-tools-officesuite.version>
-
+        <wuxia-common.version>2.3.8</wuxia-common.version>
+        <wuxia-aliyun-components.version>2.3.8</wuxia-aliyun-components.version>
+        <wuxia-orm-hibernate.version>2.3.8</wuxia-orm-hibernate.version>
+        <wuxia-orm-springdata.version>2.3.8</wuxia-orm-springdata.version>
+        <wuxia-component-cache.version>2.3.8</wuxia-component-cache.version>
+        <wuxia-component-email.version>2.3.8</wuxia-component-email.version>
+        <wuxia-weixin-api.version>2.3.8</wuxia-weixin-api.version>
+        <wuxia-tools-socket.version>2.3.8</wuxia-tools-socket.version>
+        <wuxia-tools-officesuite.version>2.3.8</wuxia-tools-officesuite.version>
 
 
         <!-- Plugin的属性定义 -->
@@ -104,7 +103,6 @@
                 <artifactId>wuxia.officesuite-tool</artifactId>
                 <version>${wuxia-tools-officesuite.version}</version>
             </dependency>
-
 
 
             <dependency>
@@ -305,8 +303,9 @@
                                             ${user.home}/.m2/repository/cn/wuxia/project/${project.artifactId}
                                         </echo>
                                         <delete includeemptydirs="true">
-                                            <fileset dir="${user.home}/.m2/repository/cn/wuxia/project/${project.artifactId}"
-                                                     defaultexcludes="false">
+                                            <fileset
+                                                    dir="${user.home}/.m2/repository/cn/wuxia/project/${project.artifactId}"
+                                                    defaultexcludes="false">
                                                 <filename name="**"/>
                                             </fileset>
                                         </delete>
@@ -329,7 +328,7 @@
             <url>https://repo.rdc.aliyun.com/repository/29962-release-ablYFt/</url>
         </repository>
         <repository>
-         		<id>rdc-snapshots</id>
+            <id>rdc-snapshots</id>
             <url>https://repo.rdc.aliyun.com/repository/29962-snapshot-54IdqK/</url>
         </repository>
         <repository>
