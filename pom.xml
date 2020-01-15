@@ -4,14 +4,14 @@
 
     <parent>
         <groupId>cn.wuxia.parent</groupId>
-        <artifactId>parent2019</artifactId>
-        <version>2.3.8</version>
+        <artifactId>parent2020</artifactId>
+        <version>2.4.0</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.wuxia.project</groupId>
     <artifactId>wuxia.project-parent</artifactId>
-    <version>2.3.0</version>
+    <version>2.4.0</version>
     <packaging>pom</packaging>
     <name>Project Parent</name>
     <url>https://github.com/wuxiatech/wuxia-project-parent.git</url>
@@ -34,17 +34,17 @@
     </modules>
     <!-- Version Setting -->
     <properties>
-        <wuxia-common.version>[2.3.8,)</wuxia-common.version>
-        <wuxia-aliyun-components.version>[2.3.8,)</wuxia-aliyun-components.version>
-        <wuxia-orm-hibernate.version>[2.3.8,)</wuxia-orm-hibernate.version>
-        <wuxia-orm-springdata.version>[2.3.8,)</wuxia-orm-springdata.version>
-        <wuxia-component-cache.version>[2.3.8,)</wuxia-component-cache.version>
-        <wuxia-component-email.version>[2.3.8,)</wuxia-component-email.version>
-        <wuxia-weixin-api.version>[2.3.8,)</wuxia-weixin-api.version>
-        <wuxia-tools-socket.version>[2.3.8,)</wuxia-tools-socket.version>
-        <wuxia-tools-officesuite.version>[2.3.8,)</wuxia-tools-officesuite.version>
+        <wuxia-common.version>[2.4.0,)</wuxia-common.version>
+        <wuxia-aliyun-components.version>[2.4.0,)</wuxia-aliyun-components.version>
+        <wuxia-orm-hibernate.version>[2.4.0,)</wuxia-orm-hibernate.version>
+        <wuxia-orm-springdata.version>[2.4.0,)</wuxia-orm-springdata.version>
+        <wuxia-component-cache.version>[2.4.0,)</wuxia-component-cache.version>
+        <wuxia-component-email.version>[2.4.0,)</wuxia-component-email.version>
+        <wuxia-weixin-api.version>[2.4.0,)</wuxia-weixin-api.version>
+        <wuxia-tools-socket.version>[2.4.0,)</wuxia-tools-socket.version>
+        <wuxia-tools-officesuite.version>[2.4.0,)</wuxia-tools-officesuite.version>
 
-        <jetty.version>9.4.14.v20181114</jetty.version>
+        <jetty.version>9.4.25.v20191220</jetty.version>
         <!-- Plugin的属性定义 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>1.8</jdk.version>
@@ -197,8 +197,6 @@
                             <value>com.mysql.cj.jdbc.Driver</value>
                         </systemProperty>
                     </systemProperties>
-                    <!-- 如果使用jrebel需要注释下面这行代码 -->
-                    <scanIntervalSeconds>5</scanIntervalSeconds>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -333,9 +331,9 @@
             <url>https://repo.rdc.aliyun.com/repository/29962-snapshot-54IdqK/</url>
         </repository>
         <repository>
-            <id>aliyun-public</id>
-            <name>Public Repositories</name>
-            <url>https://maven.aliyun.com/repository/central/</url>
+            <id>alimaven</id>
+            <name>aliyun maven</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
