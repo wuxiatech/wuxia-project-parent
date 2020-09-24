@@ -36,7 +36,7 @@
     <properties>
         <wuxia-common.version>2.5.0</wuxia-common.version>
         <wuxia-aliyun-components.version>2.5.0</wuxia-aliyun-components.version>
-        <wuxia-orm-hibernate.version>2.5.0</wuxia-orm-hibernate.version>
+        <wuxia-orm-hibernate.version>2.5.1</wuxia-orm-hibernate.version>
         <wuxia-orm-springdata.version>2.5.0</wuxia-orm-springdata.version>
         <wuxia-component-cache.version>2.5.0</wuxia-component-cache.version>
         <wuxia-component-email.version>2.5.0</wuxia-component-email.version>
